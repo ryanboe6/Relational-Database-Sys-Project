@@ -68,12 +68,15 @@
 </table>
 
 <script>
-const API_BASE = "";
+let allPlayers = [];
+let sortDirection = true;
 
-// Load teams on page load
+// Load data.json when page opens
 window.onload = async function () {
-    const res = await fetch(`${API_BASE}/teams`);
-    const teams = await res.json();
+    const res = await fetch("data.json");
+    allPlayers = await res.json();
+
+    const teams = [...new Set(allPlayers.map(player => player.team))];
 
     const select = document.getElementById("teamSelect");
     teams.forEach(team => {
@@ -85,48 +88,44 @@ window.onload = async function () {
 };
 
 // Load players + stats
-async function loadPlayers() {
+function loadPlayers() {
     const team = document.getElementById("teamSelect").value;
-
-    const res = await fetch(`${API_BASE}/players_with_stats`);
-    const data = await res.json();
 
     const table = document.querySelector("#playersTable tbody");
     table.innerHTML = "";
 
-    data
+    allPlayers
         .filter(player => player.team === team)
         .forEach(player => {
             let row = `
                 <tr>
                     <td>${player.first_name} ${player.last_name}</td>
                     <td>${player.games ?? 0}</td>
-                    <td>${player.ppg ?? "0"}</td>
-                    <td>${player.rpg ?? "0"}</td>
-                    <td>${player.apg ?? "0"}</td>
+                    <td>${player.ppg ?? 0}</td>
+                    <td>${player.rpg ?? 0}</td>
+                    <td>${player.apg ?? 0}</td>
                     <td>${player.fg_pct ? (player.fg_pct * 100).toFixed(1) + "%" : "0%"}</td>
                     <td>${player.three_pt_pct ? (player.three_pt_pct * 100).toFixed(1) + "%" : "0%"}</td>
                     <td>${player.ft_pct ? (player.ft_pct * 100).toFixed(1) + "%" : "0%"}</td>
-                    <td>${player.turnovers ?? "0"}</td>
-                    <td>${player.steals ?? "0"}</td>
-                    <td>${player.blocks ?? "0"}</td>
-                    <td>${player.fouls ?? "0"}</td>
+                    <td>${player.turnovers ?? 0}</td>
+                    <td>${player.steals ?? 0}</td>
+                    <td>${player.blocks ?? 0}</td>
+                    <td>${player.fouls ?? 0}</td>
                 </tr>
             `;
             table.innerHTML += row;
         });
 }
 
-let sortDirection = true;
-
+// Sort table by clicked column
 function sortTable(columnIndex) {
     const table = document.getElementById("playersTable");
     const tbody = table.querySelector("tbody");
     const rows = Array.from(tbody.querySelectorAll("tr"));
 
     rows.sort((a, b) => {
-        let valA = a.children[columnIndex].innerText;
-        let valB = b.children[columnIndex].innerText;
+        let valA = a.children[columnIndex].innerText.replace("%", "");
+        let valB = b.children[columnIndex].innerText.replace("%", "");
 
         let numA = parseFloat(valA);
         let numB = parseFloat(valB);
@@ -145,7 +144,6 @@ function sortTable(columnIndex) {
     tbody.innerHTML = "";
     rows.forEach(row => tbody.appendChild(row));
 }
-
 </script>
 
 </body>
