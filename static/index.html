@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>2025 NBA Finals Stats</title>
+    <style>
+        body {
+            font-family: Arial;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            color: #333;
+        }
+        select, button {
+            padding: 8px;
+            margin: 10px 0;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 20px;
+            background: white;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #333;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>2025 NBA Finals Player Stats</h1>
+
+<label>Select Team:</label>
+<br>
+<select id="teamSelect"></select>
+
+<br>
+<button onclick="loadPlayers()">Load Players</button>
+<p style="font-size: 14px; color: #555; margin-bottom: 15px;">
+<em>(Tip: Click any column header to sort the table by that stat)</em>
+</p>
+
+<table id="playersTable">
+    <thead>
+        <tr>
+            <th onclick="sortTable(0)">Name</th>
+            <th onclick="sortTable(1)">Games</th>
+            <th onclick="sortTable(2)">PPG</th>
+            <th onclick="sortTable(3)">RPG</th>
+            <th onclick="sortTable(4)">APG</th>
+            <th onclick="sortTable(5)">FG%</th>
+            <th onclick="sortTable(6)">3PT%</th>
+            <th onclick="sortTable(7)">FT%</th>
+            <th onclick="sortTable(8)">TOV</th>
+            <th onclick="sortTable(9)">STL</th>
+            <th onclick="sortTable(10)">BLK</th>
+            <th onclick="sortTable(11)">Fouls</th>
+        </tr>
+    </thead>
+    <tbody></tbody>
+</table>
+
+<script>
+const API_BASE = "";
+
+// Load teams on page load
+window.onload = async function () {
+    const res = await fetch(`${API_BASE}/teams`);
+    const teams = await res.json();
+
+    const select = document.getElementById("teamSelect");
+    teams.forEach(team => {
+        let option = document.createElement("option");
+        option.value = team;
+        option.text = team;
+        select.appendChild(option);
+    });
+};
+
+// Load players + stats
+async function loadPlayers() {
+    const team = document.getElementById("teamSelect").value;
+
+    const res = await fetch(`${API_BASE}/players_with_stats`);
+    const data = await res.json();
+
+    const table = document.querySelector("#playersTable tbody");
+    table.innerHTML = "";
+
+    data
+        .filter(player => player.team === team)
+        .forEach(player => {
+            let row = `
+                <tr>
+                    <td>${player.first_name} ${player.last_name}</td>
+                    <td>${player.games ?? 0}</td>
+                    <td>${player.ppg ?? "0"}</td>
+                    <td>${player.rpg ?? "0"}</td>
+                    <td>${player.apg ?? "0"}</td>
+                    <td>${player.fg_pct ? (player.fg_pct * 100).toFixed(1) + "%" : "0%"}</td>
+                    <td>${player.three_pt_pct ? (player.three_pt_pct * 100).toFixed(1) + "%" : "0%"}</td>
+                    <td>${player.ft_pct ? (player.ft_pct * 100).toFixed(1) + "%" : "0%"}</td>
+                    <td>${player.turnovers ?? "0"}</td>
+                    <td>${player.steals ?? "0"}</td>
+                    <td>${player.blocks ?? "0"}</td>
+                    <td>${player.fouls ?? "0"}</td>
+                </tr>
+            `;
+            table.innerHTML += row;
+        });
+}
+
+let sortDirection = true;
+
+function sortTable(columnIndex) {
+    const table = document.getElementById("playersTable");
+    const tbody = table.querySelector("tbody");
+    const rows = Array.from(tbody.querySelectorAll("tr"));
+
+    rows.sort((a, b) => {
+        let valA = a.children[columnIndex].innerText;
+        let valB = b.children[columnIndex].innerText;
+
+        let numA = parseFloat(valA);
+        let numB = parseFloat(valB);
+
+        if (!isNaN(numA) && !isNaN(numB)) {
+            return sortDirection ? numA - numB : numB - numA;
+        }
+
+        return sortDirection
+            ? valA.localeCompare(valB)
+            : valB.localeCompare(valA);
+    });
+
+    sortDirection = !sortDirection;
+
+    tbody.innerHTML = "";
+    rows.forEach(row => tbody.appendChild(row));
+}
+
+</script>
+
+</body>
+</html>

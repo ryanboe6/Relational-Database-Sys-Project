@@ -1,0 +1,11 @@
+to run app, activate the venv if not done automatically
+#type this into terminal:
+#source .venv/bin/activate
+
+#type this into terminal after activating venv:
+#uvicorn main:app --reload
+
+#crtl+click on link that shows up in terminal to load app
+#should look something like http://127.0.0.1:8000
+
+#to stop app ctrl+C in terminal

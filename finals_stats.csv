@@ -1,0 +1,27 @@
+player_id,team,games,ppg,rpg,apg,fg_pct,three_pt_pct,ft_pct,turnovers,steals,blocks,fouls
+gilgeousalexander_s,Oklahoma City Thunder,7,30.29,4.57,5.57,0.443,0.242,0.914,3.43,1.86,1.57,3.14
+williams_j,Oklahoma City Thunder,7,23.57,5.0,3.71,0.433,0.267,0.81,2.14,0.86,0.0,3.29
+holmgren_c,Oklahoma City Thunder,7,12.29,8.86,0.57,0.395,0.158,0.852,1.43,0.57,1.57,2.14
+caruso_a,Oklahoma City Thunder,7,10.14,3.57,1.57,0.434,0.4,0.833,1.14,2.43,0.86,3.0
+dort_l,Oklahoma City Thunder,7,8.14,4.57,0.71,0.422,0.447,0.5,0.43,1.57,0.43,3.57
+wallace_c,Oklahoma City Thunder,7,6.0,2.57,0.71,0.474,0.313,0.5,0.57,1.71,0.57,2.57
+wiggins_a,Oklahoma City Thunder,7,5.86,2.0,0.71,0.364,0.455,0.7,1.14,0.57,0.29,1.14
+hartenstein_i,Oklahoma City Thunder,7,5.57,6.71,2.29,0.609,,0.688,1.0,0.86,0.29,1.57
+joe_i,Oklahoma City Thunder,5,4.8,0.6,0.2,0.615,0.556,1.0,0.4,0.2,0.0,1.0
+williams_k,Oklahoma City Thunder,7,1.0,1.71,0.57,0.3,0.167,0.0,0.29,0.0,0.14,0.0
+jones_d,Oklahoma City Thunder,3,1.33,0.67,0.33,1.0,,,0.33,0.0,0.0,0.67
+mitchell_a,Oklahoma City Thunder,4,1.0,1.25,1.25,0.143,0.0,1.0,0.75,0.0,0.0,0.0
+dieng_o,Oklahoma City Thunder,3,1.0,0.0,0.0,0.333,0.5,,0.0,0.0,0.33,0.0
+siakam_p,Indiana Pacers,7,19.29,7.71,3.71,0.454,0.357,0.787,1.71,1.57,1.29,2.57
+haliburton_t,Indiana Pacers,7,14.0,4.57,5.86,0.457,0.356,1.0,3.14,1.14,0.57,1.29
+mathurin_b,Indiana Pacers,7,12.43,5.14,1.29,0.421,0.333,0.78,1.29,0.57,0.71,1.86
+mcconnell_t,Indiana Pacers,7,12.0,3.57,4.29,0.552,0.6,0.778,2.71,2.14,0.14,1.57
+nembhard_a,Indiana Pacers,7,11.71,3.14,3.71,0.466,0.423,0.773,2.43,1.29,0.14,3.0
+toppin_o,Indiana Pacers,7,11.0,5.0,1.14,0.453,0.361,0.5,1.43,0.71,0.43,1.86
+turner_m,Indiana Pacers,7,10.57,4.43,1.43,0.377,0.214,0.759,2.0,0.29,1.43,2.86
+nesmith_a,Indiana Pacers,7,9.43,5.86,1.0,0.386,0.472,0.714,1.43,0.86,0.71,4.57
+sheppard_b,Indiana Pacers,7,2.86,2.14,0.14,0.444,0.333,,0.57,0.71,0.14,1.71
+bryant_t,Indiana Pacers,6,1.67,0.33,0.17,0.5,0.4,0.5,0.0,0.0,0.17,1.17
+bradley_t,Indiana Pacers,3,3.0,2.33,0.0,0.5,,0.833,0.67,0.0,0.0,1.67
+furphy_j,Indiana Pacers,4,0.5,0.25,0.0,1.0,,0.0,0.25,0.0,0.0,0.25
+johnson_j,Indiana Pacers,2,1.0,0.0,0.0,0.5,,,0.0,0.0,0.0,1.0

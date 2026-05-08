@@ -1,0 +1,41 @@
+player_id,team,first_name,last_name,jersey_number,position,height,weight,birth_date,college
+bradley_t,Indiana Pacers,Tony,Bradley,13,C,6-10,248,"January 8, 1998",UNC
+brown_m,Indiana Pacers,Moses,Brown,3,C,7-2,258,"October 13, 1999",UCLA
+bryant_t,Indiana Pacers,Thomas,Bryant,3,C,6-9,248,"July 31, 1997",Indiana
+dennis_r,Indiana Pacers,RayJ,Dennis,10,PG,6-1,180,"March 30, 2001","Boise State, Toledo, Baylor"
+freeman_e,Indiana Pacers,Enrique,Freeman,8,PF,6-9,220,"July 29, 2000",University of Akron
+furphy_j,Indiana Pacers,Johnny,Furphy,12,SG,6-8,200,"December 8, 2004",Kansas
+haliburton_t,Indiana Pacers,Tyrese,Haliburton,0,PG,6-5,185,"February 29, 2000",Iowa State
+jackson_i,Indiana Pacers,Isaiah,Jackson,22,C,6-8,205,"January 10, 2002",Kentucky
+jackson_q,Indiana Pacers,Quenton,Jackson,29,PG,6-4,173,"September 15, 1998",Texas A&M
+johnson_j,Indiana Pacers,James,Johnson,16,PF,6-7,240,"February 20, 1987",Wake Forest
+mathurin_b,Indiana Pacers,Bennedict,Mathurin,0,SF,6-5,210,"June 19, 2002",Arizona
+mcconnell_t,Indiana Pacers,T.J.,McConnell,9,PG,6-1,190,"March 25, 1992","Duquesne, Arizona"
+nembhard_a,Indiana Pacers,Andrew,Nembhard,2,SG,6-4,191,"January 16, 2000","Florida, Gonzaga"
+nesmith_a,Indiana Pacers,Aaron,Nesmith,23,SF,6-5,215,"October 16, 1999",Vanderbilt
+newton_t,Indiana Pacers,Tristen,Newton,4,SG,6-5,190,"April 26, 2001","East Carolina University, UConn"
+okafor_j,Indiana Pacers,Jahlil,Okafor,15,C,6-10,270,"December 15, 1995",Duke
+sheppard_b,Indiana Pacers,Ben,Sheppard,26,SG,6-6,190,"July 16, 2001",Belmont
+siakam_p,Indiana Pacers,Pascal,Siakam,43,PF,6-8,245,"April 2, 1994",New Mexico State
+toppin_o,Indiana Pacers,Obi,Toppin,1,PF,6-9,220,"March 4, 1998",Dayton
+turner_m,Indiana Pacers,Myles,Turner,33,C,6-11,250,"March 24, 1996",Texas
+walker_j,Indiana Pacers,Jarace,Walker,5,PF,6-7,235,"September 4, 2003",Houston
+wiseman_j,Indiana Pacers,James,Wiseman,13,C,6-11,240,"March 31, 2001",Memphis
+carlson_b,Oklahoma City Thunder,Branden,Carlson,15,C,7-0,220,"June 14, 1999",Utah
+caruso_a,Oklahoma City Thunder,Alex,Caruso,9,SG,6-5,186,"February 28, 1994",Texas A&M
+dieng_o,Oklahoma City Thunder,Ousmane,Dieng,13,C,6-9,185,"May 21, 2003",
+dort_l,Oklahoma City Thunder,Luguentz,Dort,5,SF,6-4,220,"April 19, 1999",Arizona State
+ducas_a,Oklahoma City Thunder,Alex,Ducas,88,SG,6-7,220,"December 11, 2000",Saint Mary's
+flagler_a,Oklahoma City Thunder,Adam,Flagler,14,SG,6-1,180,"December 1, 1999","Presbyterian College, Baylor"
+gilgeousalexander_s,Oklahoma City Thunder,Shai,Gilgeous-Alexander,2,PG,6-6,195,"July 12, 1998",Kentucky
+hartenstein_i,Oklahoma City Thunder,Isaiah,Hartenstein,55,C,7-0,250,"May 5, 1998",
+holmgren_c,Oklahoma City Thunder,Chet,Holmgren,7,C,7-1,208,"May 1, 2002",Gonzaga
+joe_i,Oklahoma City Thunder,Isaiah,Joe,11,SG,6-4,165,"July 2, 1999",Arkansas
+jones_d,Oklahoma City Thunder,Dillon,Jones,3,SF,6-5,235,"October 29, 2001",Weber State
+leons_m,Oklahoma City Thunder,Malevy,Leons,17,SF,6-9,210,"September 23, 1999","Mineral Area College, Bradley"
+mitchell_a,Oklahoma City Thunder,Ajay,Mitchell,25,SG,6-4,190,"June 25, 2002",UC Santa Barbara
+reese_a,Oklahoma City Thunder,Alex,Reese,15,PF,6-9,245,"May 21, 1999",Alabama
+wallace_c,Oklahoma City Thunder,Cason,Wallace,22,SG,6-3,195,"November 7, 2003",Kentucky
+wiggins_a,Oklahoma City Thunder,Aaron,Wiggins,21,SG,6-5,190,"January 2, 1999",Maryland
+williams_j,Oklahoma City Thunder,Jalen,Williams,8,SG,6-5,211,"April 14, 2001",Santa Clara
+williams_k,Oklahoma City Thunder,Kenrich,Williams,34,PF,6-7,210,"December 2, 1994",TCU
